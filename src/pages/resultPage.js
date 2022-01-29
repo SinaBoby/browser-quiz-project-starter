@@ -1,9 +1,9 @@
 'use strict';
 
 import { createResultElement } from '../views/resultView.js';
-import { createReferenceElement } from '../views/referenceView.js';
+import { router } from '../router.js';
 import { quizData } from '../data.js';
-import { REFERENCE_LIST_ID } from '../constants.js';
+import {REDO_QUIZ_BUTTON_ID} from '../constants.js';
 
 export const resultPage = (userInterface, refresh = '') => {
   
@@ -24,13 +24,22 @@ export const resultPage = (userInterface, refresh = '') => {
 
     userInterface.appendChild(resultElement);
 
-    // const referenceListElement = document.getElementById(REFERENCE_LIST_ID);
+    document
+    .getElementById(REDO_QUIZ_BUTTON_ID)
+    .addEventListener('click', redoQuiz);
 
-    // for (const {links} of quizData.questions) {
-    //   for (const link of links) {
-    //       const referenceElement = createReferenceElement(link.text, link.href);
-    //       referenceListElement.appendChild(referenceElement);  
-    //     }
-        
-    //   }
+    function redoQuiz() {
+      quizData.currentQuestionIndex = 0;
+      quizData.wrongSum = 0;
+      quizData.correctSum = 0;
+      quizData.timeScore = 0;
+      
+      for (const question of quizData.questions) {
+        question.selected = null;
+      }
+
+      sessionStorage.clear();
+      
+      router('welcome');
+    }
 };
