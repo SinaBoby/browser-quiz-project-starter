@@ -4,6 +4,7 @@ import { createResultElement } from '../views/resultView.js';
 import { createReferenceElement } from '../views/referenceView.js';
 import { quizData } from '../data.js';
 import { REFERENCE_LIST_ID } from '../constants.js';
+import { router } from '../router.js';
 
 export const resultPage = (userInterface, refresh = '') => {
   
@@ -23,6 +24,10 @@ export const resultPage = (userInterface, refresh = '') => {
     }
 
     userInterface.appendChild(resultElement);
+    document.getElementById('restart').addEventListener('click', function() {
+     refresh = '';
+      sessionStorage.removeItem('result')
+      router('welcome');})
 
     // const referenceListElement = document.getElementById(REFERENCE_LIST_ID);
 

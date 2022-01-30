@@ -9,7 +9,7 @@ const loadApp = () => {
   let sessionKey;
   
   for (const key of sessionKeys) {
-    sessionKey = key.match(questionOrResult);
+     sessionKey = key.match(questionOrResult);
     if (sessionKey !== null) {
       break;
     }
