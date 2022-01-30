@@ -19,6 +19,7 @@ export const router = (page, sessionKey = '') => {
       initQuestionPage(userInterfaceElement);
       break;
     case 'welcome':
+      sessionKey = ''
       welcomePage(userInterfaceElement);
       break;
     case 'result':
