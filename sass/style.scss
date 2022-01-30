@@ -317,12 +317,12 @@ ol {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-height: 864px) {
  
-  
-  .answer-item {
-    min-width: 300px;
+  #question-interface {
+    gap:0;
   }
+  
 }
 
 
@@ -368,6 +368,9 @@ ol {
     }
     #hud img {
      display: none;
+    }
+    .answer-item {
+      min-width: 300px;
     }
 
     li{
