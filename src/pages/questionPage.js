@@ -13,16 +13,20 @@ import { router } from '../router.js';
 import { createReferenceElement } from '../views/referenceView.js';
 
 export const initQuestionPage = (userInterface, refresh = '') => {
-
   if (refresh === '') {
-    const {currentQuestionIndex, wrongSum, correctSum, timeScore} = quizData;
+    const { currentQuestionIndex, wrongSum, correctSum, timeScore } = quizData;
 
     const session = {
-      currentQuestionIndex, wrongSum, correctSum, timeScore,
+      currentQuestionIndex,
+      wrongSum,
+      correctSum,
+      timeScore,
     };
 
-    sessionStorage.setItem(`question${quizData.currentQuestionIndex}`, JSON.stringify(session));
-
+    sessionStorage.setItem(
+      `question${quizData.currentQuestionIndex}`,
+      JSON.stringify(session)
+    );
   } else {
     const session = JSON.parse(sessionStorage.getItem(refresh));
 
@@ -56,7 +60,6 @@ export const initQuestionPage = (userInterface, refresh = '') => {
   }
 
   function chooseAnswer(e) {
-
     click = true;
     currentQuestion.selected = e.target.dataset.key;
     const timer = document.getElementById(TIMER_ELEMENT_ID);
@@ -80,6 +83,7 @@ export const initQuestionPage = (userInterface, refresh = '') => {
 
     for (const option of answersListElement.children) {
       option.removeEventListener('click', chooseAnswer);
+      option.style.color = "black";
     }
   }
 
@@ -90,6 +94,7 @@ export const initQuestionPage = (userInterface, refresh = '') => {
     if (!click) {
       if (clickCount < 2) {
         const clickError = createErrorElement(isLastQuestion());
+        clickError.classList.add('error');
         answersListElement.appendChild(clickError);
       }
     } else {

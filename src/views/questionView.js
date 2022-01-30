@@ -13,7 +13,7 @@ import { REFERENCE_LIST_ID } from '../constants.js';
  */
 export const createQuestionElement = (question, isLast) => {
   const element = document.createElement('div');
-  element.id = "question-interface"
+  element.id = 'question-interface';
   // I use String.raw just to get fancy colors for the HTML in VS Code.
   element.innerHTML = String.raw`
   <div id="hud">
@@ -41,10 +41,13 @@ export const createQuestionElement = (question, isLast) => {
     <h1>${question}</h1>
 
     <ul id="${ANSWERS_LIST_ID}"></ul>
-    <p>Need more resources?</p>
-    <ol id="${REFERENCE_LIST_ID}"></ol>
 
-    <button class="next-question-btn" id="${
+    <div>
+    <h3>Need more resources?</h3>
+    <ol id="${REFERENCE_LIST_ID}"></ol>
+    </div>
+
+    <button class="btn next-question-btn" id="${
       isLast ? GET_RESULT_BUTTON_ID : NEXT_QUESTION_BUTTON_ID
     }">
       ${isLast ? 'Get result' : 'Next question'}
