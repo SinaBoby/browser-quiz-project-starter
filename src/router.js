@@ -11,15 +11,18 @@ export const router = (page, sessionKey = '') => {
 
   switch (page) {
     case 'refresh':
+      const question = /question[0-9]/;
       sessionKey === 'result'
       ? resultPage(userInterfaceElement, sessionKey)
-      : initQuestionPage(userInterfaceElement, sessionKey);
+      ? sessionKey === question
+      : initQuestionPage(userInterfaceElement, sessionKey)
+      : welcomePage(userInterfaceElement);
       break;
     case 'question':
       initQuestionPage(userInterfaceElement);
       break;
     case 'welcome':
-      sessionKey = ''
+      sessionKey = null;
       welcomePage(userInterfaceElement);
       break;
     case 'result':
