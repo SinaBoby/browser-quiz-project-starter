@@ -515,12 +515,6 @@ ol li {
 }
 
 @media screen and (max-width: 1024px) {
-  .answer-item {
-    min-width: 300px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
   body {
     background-repeat: repeat;
     background-size: 100% 100%;
@@ -568,6 +562,9 @@ ol li {
   #question-interface #hud img {
     display: none;
   }
+  #question-interface .answer-item {
+    min-width: 300px;
+  }
   #question-interface li {
     line-height: 1.75rem;
     font-weight: 400;
@@ -579,5 +576,11 @@ ol li {
   }
   #question-interface ol {
     width: 300px;
+  }
+}
+
+@media screen and (max-height: 864px) {
+  #question-interface {
+    gap: 0;
   }
 }
