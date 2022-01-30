@@ -5,7 +5,7 @@ import { router } from './router.js';
 const loadApp = () => {
   const questionOrResult = /question[0-9]|result/;
   const sessionKeys = Object.keys(sessionStorage);
-  let sessionKey;
+  let sessionKey = null; 
 
   for (const key of sessionKeys) {
     sessionKey = key.match(questionOrResult);
@@ -13,6 +13,8 @@ const loadApp = () => {
       break;
     }
   }
+  
+   
 
   sessionKey === null ? router('welcome') : router('refresh', sessionKey[0]);
 };
