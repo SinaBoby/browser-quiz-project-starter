@@ -15,50 +15,51 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3rem;
-  color: #000000;
-  height: 100px;
-  line-height: 40px;
+  min-height: 800px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+ overflow-y: auto;
 }
 
 .centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  //position: absolute;
+  //top: 50%;
+  //left: 50%;
+  //transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  border: 3px solid white;
   border-radius: 10px;
-  width: 50vw;
-  min-height: 70vh;
-}
-
-.dashboard {
   background-color: rgba(236, 169, 22, 0.8);
   border: 2px solid rgba(236, 169, 22, 1);
-  border-radius: 2%;
-  padding: 2rem 1rem;
-  width: 60%;
+  padding: 20px 1rem;
+  max-width: 800px;
+  width: 80%;
   min-height: 70%;
-  max-height: 95vh;
+  max-height: 98vh;
   box-shadow: 0px 0px 10px 0px rgb(247, 246, 244);
   margin: 0 auto;
-  text-align: center;
+  
 }
-.dashboard img {
+h1 {
+  font-size: 3rem;
+  color: #000000;
+  line-height: 33px;
+
+}
+
+
+.centered img {
   margin: auto;
   object-fit: cover;
   max-width: 100%;
   max-height: 100%;
 }
 .img-container {
+  margin: auto;
   display: inline-block;
   max-width: 260px;
   max-height: 260px;
@@ -71,6 +72,10 @@ hr {
   background-color: rgba(166, 5, 5, 0.8);
   border-radius: 20px;
 }
+#user-interface {
+  min-height: 680px;
+}
+
 #welcome-interface {
   display: flex;
   flex-direction: column;
@@ -133,12 +138,17 @@ hr {
   flex-direction: column;
   height: 100%;
   width: 80%;
-  gap: 30px;
-  margin: 1rem;
+  gap: 10px;
+  margin:0 1rem;
 
   h1 {
     width: 100%;
     margin: auto;
+    font-size: 2.5rem;
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .btn {
     width: max-content;
@@ -151,11 +161,12 @@ hr {
   }
 }
 .error {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: rgb(166, 5, 5);
   transition: transform 2s;
   margin-top: 20px;
   animation: errorMove 1s infinite linear alternate;
+  max-width: 400px;
 }
 
 #answers-list {
@@ -166,7 +177,7 @@ hr {
 .answer-item {
   border: 1px solid black;
   font-size: 2rem;
-  margin: 1rem 0;
+  margin: 10px 0;
   padding: 0 1rem;
   cursor: pointer;
   min-width: 400px;
@@ -200,7 +211,7 @@ hr {
 #hud {
   display: flex;
   justify-content: space-between;
-  margin-top: 0.5rem;
+  align-items: center;
 }
 
 .hud-prefix {
@@ -210,19 +221,19 @@ hr {
 }
 .hud-main-text {
   text-align: center;
-  font-size: 2.2rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 800;
 }
 
 #hud-item {
   width: 100px;
   border-radius: 10px;
-  background-color: rgba(166, 5, 5, 0.5);
-  height: 90px;
+  background-color: rgba(166, 5, 5, 0.4);
+  height: 80px;
 }
 #hud img {
   width: 100px;
-  height: 100px;
+  height: 86px;
   margin: 0;
   animation: pictureMove 4s infinite linear alternate;
 }
@@ -320,14 +331,14 @@ ol {
 
 
 
-@media screen and (max-width: 1024px){
+@media (max-width: 1024px){
   body {
     
     background-repeat: repeat;
-    background-size: 100% 100%;
+    
   }
   #user-interface {
-    height: 100vh;
+    height: auto;
   }
   #question-interface {
     width: 100%;
@@ -339,6 +350,7 @@ ol {
       margin-top: 0.5rem;
       flex-wrap: wrap;
       gap:10px
+      
     }
     
     .hud-prefix {
@@ -383,10 +395,75 @@ ol {
     }
   }
 }
-@media screen and (max-height: 864px) {
  
+@media (max-width:575px){
+
+  #user-interface {
+    margin: 80px 0;
+    min-height: 850px;
+  }
+  #welcome-interface {
+    height: 100%;
+    width: 100%;
+    &>div {
+      flex-direction: column;
+    }
+  }
+  .instruction {
+    width: 300px;
+    flex-basis: 200px;
+  }
+  #welcome-interface> div li {
+    margin:10px auto;
+    height: auto;
+    width: 300px;
+    list-style: none;
+  }
+}
+
+@media (max-width:430px ){
+
+  body {
+   height: auto;
+  }
+  #welcome-interface >div li {
+    width:80%
+  }
+  #welcome-interface {
+    hr {
+      max-width: 80%;
+      margin: auto;
+    }
+  }
   #question-interface {
     gap:0;
+    height: auto;
+
+    .hud-prefix {
+      font-size: 1rem;
+    }
+    h1 {
+      font-size: 1.7rem;
+      margin-top: 10px;
+    }
+   
+    #answers-list {
+      min-height: 200px;
+      width:auto;
+      li {
+        min-width:200px;
+      }
+    }
+   
+    li {
+      line-height: 1.3rem;
+      
+    }
   }
-  
+  .btn {
+    padding:5px 10px;
+    width:max-content;
+  }
+
+
 }
