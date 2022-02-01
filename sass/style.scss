@@ -504,6 +504,17 @@ ol {
     display: flex;
     flex-direction: column;
   }
+  #result-interface  {
+    p:nth-child(3),p:nth-child(4),p:nth-child(5),a{
+      text-align: left;
+    }
+    .btn {
+      margin-top:40px
+    }
+  }
+  #result-interface h1 {
+    margin-bottom: 50px;
+  }
 
 
 }

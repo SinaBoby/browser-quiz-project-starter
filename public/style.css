@@ -709,4 +709,13 @@ ol li {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  #result-interface p:nth-child(3), #result-interface p:nth-child(4), #result-interface p:nth-child(5), #result-interface a {
+    text-align: left;
+  }
+  #result-interface .btn {
+    margin-top: 40px;
+  }
+  #result-interface h1 {
+    margin-bottom: 50px;
+  }
 }
