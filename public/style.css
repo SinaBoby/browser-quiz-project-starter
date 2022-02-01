@@ -134,6 +134,8 @@ hr {
 
 #user-interface {
   min-height: 680px;
+  -webkit-animation: pageTransition 1s ease-out alternate;
+          animation: pageTransition 1s ease-out alternate;
 }
 
 #welcome-interface {
@@ -154,6 +156,8 @@ hr {
   text-align: center;
   min-height: 70vh;
   gap: 10px;
+  -webkit-animation: pageTransition 1s ease-out alternate;
+          animation: pageTransition 1s ease-out alternate;
 }
 
 #welcome-interface h1 {
@@ -226,6 +230,8 @@ hr {
   width: 80%;
   gap: 10px;
   margin: 0 1rem;
+  -webkit-animation: pageTransition 1s ease-out alternate;
+          animation: pageTransition 1s ease-out alternate;
 }
 
 #question-interface h1 {
@@ -288,6 +294,16 @@ hr {
   cursor: pointer;
   min-width: 400px;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .btn:hover,
@@ -405,6 +421,8 @@ ol li {
 }
 
 #result-interface {
+  -webkit-animation: pageTransition 1s ease-out alternate;
+          animation: pageTransition 1s ease-out alternate;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -427,9 +445,9 @@ ol li {
   font-style: italic;
 }
 
-#result-interface span {
-  font-weight: 800;
-  color: rgba(166, 5, 5, 0.9);
+#result-interface b {
+  font-size: 1.95rem;
+  color: darkred;
 }
 
 #result-interface a {
@@ -505,6 +523,26 @@ ol li {
   100% {
     -webkit-transform: translateY(1.25);
             transform: translateY(1.25);
+  }
+}
+
+@-webkit-keyframes pageTransition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: 1;
+            transform: 1;
+  }
+}
+
+@keyframes pageTransition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: 1;
+            transform: 1;
   }
 }
 
@@ -611,9 +649,29 @@ ol li {
     max-width: 80%;
     margin: auto;
   }
+  #welcome-interface img {
+    margin-top: 70px;
+    width: 170px;
+  }
+  #welcome-interface .btn {
+    margin-top: 1rem;
+  }
   #question-interface {
-    gap: 0;
+    gap: 10px;
     height: auto;
+  }
+  #question-interface #hud-item:last-child {
+    line-height: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   #question-interface .hud-prefix {
     font-size: 1rem;
@@ -623,19 +681,32 @@ ol li {
     margin-top: 10px;
   }
   #question-interface #answers-list {
-    min-height: 200px;
+    min-height: 344px;
     width: auto;
   }
   #question-interface #answers-list li {
-    min-width: 200px;
+    min-width: 240px;
   }
   #question-interface li {
     line-height: 1.3rem;
+    text-align: center;
   }
   .btn {
     padding: 5px 10px;
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  #question-interface ol {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }

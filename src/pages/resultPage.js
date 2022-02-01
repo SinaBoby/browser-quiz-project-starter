@@ -43,7 +43,7 @@ export const resultPage = (userInterface, refresh = '') => {
       }
 
       sessionStorage.clear();
-      //sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+      sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
       router('welcome');
     }
 };
