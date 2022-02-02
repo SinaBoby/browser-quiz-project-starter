@@ -14,9 +14,9 @@ const loadApp = () => {
     }
   }
   
-   
-
+  
   sessionKey === null ? router('welcome') : router('refresh', sessionKey[0]);
+
 };
 
 window.addEventListener('load', loadApp);
