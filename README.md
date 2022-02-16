@@ -1,20 +1,21 @@
 # JavaScript mini Quiz App
 
+<img src="./public/Assets/Recording 2022-02-16 at 01.03.16.gif">
+
 This project has created as the end project for  [Browsers module](https://github.com/HackYourFuture/Browsers) of [Hack Your Future](https://www.hackyourfuture.net/) program.
 
 ---
 
-# User Guide
-    <ul>
-    <li>You have <b>1</b> minute for each question.</li>
-    <hr>
-    <li>Answer within <b>30</b> seconds and get extra 'time points'</li>
-    <hr>
-    <li>Feel confused? Check out the references.</li>
-    <hr>
-    <li>You will find your final score at the result page.</li>
-    </ul>
-    <hr>
+## User Guide
+
+    - You have 1 minute for each question.
+    
+    - Answer within 30 seconds and get extra 'time points'
+    
+    - Feel confused? Check out the references.
+    
+    - You will find your final score at the result page.
+
 ---
 
 ## Development
