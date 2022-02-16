@@ -23,7 +23,7 @@ This project has created as the end project for  [Browsers module](https://githu
 
 ---
 
-## Used tools and languages
+## 🛠️ Used tools and languages
 
 ![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=JavaScript&color=F7DF1E)
 ![](https://img.shields.io/badge/Code-HTML5-informational?style=flat&logo=HTML5&color=E34F26)
