@@ -4,7 +4,7 @@ This project has created as the end project for  [Browsers module](https://githu
 
 ---
 
-<h3>User Guide</h3>
+# User Guide
     <ul>
     <li>You have <b>1</b> minute for each question.</li>
     <hr>
@@ -14,6 +14,8 @@ This project has created as the end project for  [Browsers module](https://githu
     <hr>
     <li>You will find your final score at the result page.</li>
     </ul>
+    <hr>
+---
 
 ## Development
 
