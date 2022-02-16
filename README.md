@@ -2,7 +2,12 @@
 
 <img src="./public/Assets/Recording 2022-02-16 at 01.03.16.gif">
 
+---
+
 This project has created as the end project for  [Browsers module](https://github.com/HackYourFuture/Browsers) of [Hack Your Future](https://www.hackyourfuture.net/) program.
+
+### link to the Demo:
+[Demo](https://striders-quizapp.netlify.app/)
 
 ---
 
@@ -18,6 +23,18 @@ This project has created as the end project for  [Browsers module](https://githu
 
 ---
 
+## Used tools and languages
+
+![](https://img.shields.io/badge/Code-JavaScript-informational?style=flat&logo=JavaScript&color=F7DF1E)
+![](https://img.shields.io/badge/Code-HTML5-informational?style=flat&logo=HTML5&color=E34F26)
+![](https://img.shields.io/badge/Style-CSS3-informational?style=flat&logo=CSS3&color=1572B6)
+![](https://img.shields.io/badge/style-SASS-informational?style=flat&logo=SASS&color=E34F26)
+![](https://img.shields.io/badge/Tools-Git-informational?style=flat&logo=Git&color=F05032)
+![](https://img.shields.io/badge/Tools-Netlify-informational?style=flat&logo=netlify&color=00C7B7)
+![](https://img.shields.io/badge/Tools-GitHub-informational?style=flat&logo=GitHub&color=181717)
+![](https://img.shields.io/badge/Tools-VSCode-informational?style=flat&logo=visualstudiocode&color=1572B6)
+
+---
 ## Development
 
 To run this project locally you will need to open `index.html` in your browser using a local server. LiveServer, `http-server`, `study-lenses`, or any other local static server will work.
@@ -28,7 +45,7 @@ There are no dependencies needed to run the website, everything is prepared to w
 
 - `npm install`
 
-# Structure
+## Structure
 
 Let's run through the folders:
 
@@ -63,7 +80,7 @@ index.html
 - `data.js` this is our data model. Anything we need to store in the browser we place inside the data file
 - `router.js` this file will transition the app from one page to the other and clear the HTML.
 
-# Backlog
+## Backlog
 
 So what should be built? Below is a collection of user stories you can choose from. Stories inside of each priority level are not necessarily in order, it's up to your group to decide how they fit into your strategy. These are also just suggestion, feel free to change them or create your own! Feel free to get creative.
 
