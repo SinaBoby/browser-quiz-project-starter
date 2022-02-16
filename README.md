@@ -1,8 +1,19 @@
-# Getting Started
+# JavaScript mini Quiz App
 
-This repository functions as the basis of the quiz project in the [Browsers module](https://github.com/HackYourFuture/Browsers). Before the first group meeting, have a look through this code and try to understand how it works and how it is organised. We will explain the idea behind the structure below as well as the Backlog (which will identify what is needed to be implemented).
+This project has created as the end project for  [Browsers module](https://github.com/HackYourFuture/Browsers) of [Hack Your Future](https://www.hackyourfuture.net/) program.
 
-We have already implemented a very basic UI that can go through the questions to show you how this kind of code is split and how you can use the structure to your advantage. Have a look through it before your first group meeting as it can take a little while to get your head around it!
+---
+
+<h3>User Guide</h3>
+    <ul>
+    <li>You have <b>1</b> minute for each question.</li>
+    <hr>
+    <li>Answer within <b>30</b> seconds and get extra 'time points'</li>
+    <hr>
+    <li>Feel confused? Check out the references.</li>
+    <hr>
+    <li>You will find your final score at the result page.</li>
+    </ul>
 
 ## Development
 
@@ -22,7 +33,17 @@ Let's run through the folders:
 public
 src
 └── pages
+|    └── welcomePage.js
+|    └── questionPage.js
+|    └── resultPage.js
 └── views
+|    └── answerView.js
+|    └── clickErrorView.js
+|    └── questionView.js
+|    └── referenceView.js
+|    └── resultView.js
+|    └── timerView.js
+|    └── welcomeView.js
 └── app.js
 └── constants.js
 └── data.js
@@ -32,10 +53,10 @@ index.html
 
 - `public` this contains the static files that can be used by our `index.html` file
 - `src` this contains all of our JavaScript code
- - `pages` this folder contains our functions that handle user interactions. You can also see it as the code that processes and updates the data or DOM
+- `pages` this folder contains our functions that handle user interactions. You can also see it as the code that processes and updates the data or DOM
   it also contains our code that links up our handler code to the DOM.
- - `views` this contains code to define what the DOM will look like. They will create the DOM element and give it back. They should never read from/write to the dom, that is what the pages do.
-- `app.js` this file our initialisation code. Generally this code should only run once and starts the application
+- `views` this contains code to define what the DOM will look like. They will create the DOM element and give it back. They should never read from/write to the dom, that is what the pages do.
+- `app.js` this file our initialization code. Generally this code should only run once and starts the application
 - `data.js` this is our data model. Anything we need to store in the browser we place inside the data file
 - `router.js` this file will transition the app from one page to the other and clear the HTML.
 
@@ -65,5 +86,3 @@ So what should be built? Below is a collection of user stories you can choose fr
 - [ ] A user can learn the about the correct answer and look into resources (if your quiz is more educational)
 - [ ] Transition between pages or question look fancy like TypeForm for example
 - [ ] Anything else you can think of... go nuts!
-
-

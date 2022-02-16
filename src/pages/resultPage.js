@@ -9,7 +9,7 @@ export const resultPage = (userInterface, refresh = '') => {
   let resultElement;
 
   if (refresh === 'result') {
-    resultElement = createResultElement(
+      resultElement = createResultElement(
       sessionStorage.correctSum,
       sessionStorage.wrongSum,
       sessionStorage.timeScore
